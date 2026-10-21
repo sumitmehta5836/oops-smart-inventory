@@ -1,4 +1,4 @@
-# Inventory Management System
+# Inventory Management System 
 
 A modern, fast, and secure desktop inventory management, point-of-sale, and invoicing system built with **C++17**, **Qt (Qt 6 / Qt 5)**, and **SQLite3**.
 
