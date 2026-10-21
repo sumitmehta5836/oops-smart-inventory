@@ -1,0 +1,8 @@
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryApp.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryCLI.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/edit_cache.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/rebuild_cache.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryApp_autogen_timestamp_deps.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryApp_autogen.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryCLI_autogen_timestamp_deps.dir
+/Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/CMakeFiles/InventoryCLI_autogen.dir

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+b8c377c3aa26f3bd6953459c50ed67f5 CMakeFiles/InventoryApp_autogen
+b8c377c3aa26f3bd6953459c50ed67f5 CMakeFiles/InventoryCLI_autogen
+2057f1201defa79920ed4112a17b4cef InventoryApp_autogen/timestamp
+d1258293356578b69378d252545ecee8 InventoryCLI_autogen/timestamp

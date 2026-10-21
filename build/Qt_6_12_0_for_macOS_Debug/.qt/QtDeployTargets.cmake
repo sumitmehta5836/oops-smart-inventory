@@ -1,0 +1,5 @@
+set(__QT_DEPLOY_TARGETS "InventoryApp;InventoryCLI")
+set(__QT_DEPLOY_TARGET_InventoryApp_FILE /Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/InventoryApp)
+set(__QT_DEPLOY_TARGET_InventoryApp_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_InventoryCLI_FILE /Users/divyeshtripathi/Inventory-Management/build/Qt_6_12_0_for_macOS_Debug/InventoryCLI)
+set(__QT_DEPLOY_TARGET_InventoryCLI_TYPE EXECUTABLE)
