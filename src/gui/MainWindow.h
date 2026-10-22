@@ -16,6 +16,14 @@ class InvoicesWidget;
 class ReportsWidget;
 class UsersWidget;
 
+// OOP CONCEPT: INHERITANCE
+// MainWindow inherits from Qt's QMainWindow base class.
+// Base Class: QMainWindow (provides standard desktop window features like status bars, central widgets, and event dispatch)
+// Derived Class: MainWindow (extends the base class with customized role-based views, theme toggles, and inventory tab management)
+//
+// OOP CONCEPT: ENCAPSULATION
+// Encapsulates references to the core backend services (Database, Auth, Inventory, Billing),
+// current user credentials, and UI sub-widgets, preventing external code from tampering with window internals.
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
@@ -32,6 +40,8 @@ private slots:
     void toggleTheme();
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING)
+    // Internal state variables and child widget pointers are hidden from external access.
     Database& db_;
     Auth& auth_;
     Inventory& inventory_;

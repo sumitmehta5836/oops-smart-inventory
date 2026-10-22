@@ -22,6 +22,10 @@ void printBill(const Bill& b) {
     std::cout << "TOTAL: Rs " << b.total << "\n\n";
 }
 
+// OOP CONCEPT: ABSTRACTION IN CLIENT CONSUMPTION
+// The main function serves as the CLI driver, demonstrating how client code consumes
+// the public interfaces of Database, Auth, Inventory, and Billing without knowing the
+// internal SQL queries, cryptographic operations, or transaction rollback mechanics.
 int main() {
     try {
         Database db("inventory.db");

@@ -7,6 +7,12 @@
 #include "Billing.h"
 #include "models.h"
 
+// OOP CONCEPT: INHERITANCE
+// InvoicesWidget inherits from QWidget to display transaction history.
+// Base Class: QWidget | Derived Class: InvoicesWidget
+//
+// OOP CONCEPT: ENCAPSULATION
+// Encapsulates the invoice log table, filter logic, and Billing service reference.
 class InvoicesWidget : public QWidget {
     Q_OBJECT
 
@@ -20,6 +26,7 @@ private slots:
     void onSelectionChanged();
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING)
     Billing& billing_;
     User currentUser_;
 

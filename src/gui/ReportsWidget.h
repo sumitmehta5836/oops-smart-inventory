@@ -7,6 +7,12 @@
 #include "Inventory.h"
 #include "models.h"
 
+// OOP CONCEPT: INHERITANCE
+// ReportsWidget inherits from QWidget to provide an executive analytics dashboard.
+// Base Class: QWidget | Derived Class: ReportsWidget
+//
+// OOP CONCEPT: ENCAPSULATION
+// Encapsulates KPI summary cards, sales history tables, and analytics data fetching.
 class ReportsWidget : public QWidget {
     Q_OBJECT
 
@@ -15,6 +21,7 @@ public:
     void refreshReports();
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING)
     Billing& billing_;
     Inventory& inventory_;
     User currentUser_;

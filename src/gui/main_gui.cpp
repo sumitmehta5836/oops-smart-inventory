@@ -8,6 +8,11 @@
 #include "Inventory.h"
 #include "Billing.h"
 
+// OOP ARCHITECTURE: ENTRY POINT & APPLICATION LIFECYCLE
+// Demonstrates Abstraction and Encapsulation:
+// 1. Abstraction: The GUI entry point instantiates the service layer (Database, Auth, Inventory, Billing)
+//    and GUI dialogs (LoginDialog, MainWindow) interacting purely via high-level public interfaces.
+// 2. Polymorphism: Dialog lifecycle management (loginDlg.exec()) invokes Qt's virtual event dispatching.
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
     app.setStyleSheet(Theme::mainStyleSheet());

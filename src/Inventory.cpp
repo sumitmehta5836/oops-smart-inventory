@@ -35,6 +35,10 @@ std::vector<Product> Inventory::readAll(sqlite3_stmt* stmt) {
     return list;
 }
 
+// OOP CONCEPT: ENCAPSULATION & ABSTRACTION
+// 1. Encapsulation: Validates input constraints (non-empty name, non-negative price/quantity)
+//    and role permissions to ensure class data integrity.
+// 2. Abstraction: Callers invoke a single method without dealing with SQLite statement preparation or parameter binding.
 void Inventory::addProduct(const User& actor, const std::string& name,
                            double price, int quantity) {
     requireAdmin(actor);
@@ -82,6 +86,8 @@ std::vector<Product> Inventory::getAll() {
     return readAll(prepare("SELECT id, name, price, quantity FROM products ORDER BY name;"));
 }
 
+// OOP CONCEPT: ABSTRACTION
+// Hides SQL query formatting, wildcard pattern generation, and row-to-object deserialization.
 std::vector<Product> Inventory::search(const std::string& keyword) {
     sqlite3_stmt* st = prepare(
         "SELECT id, name, price, quantity FROM products WHERE name LIKE ? ORDER BY name;");

@@ -4,6 +4,11 @@
 #include "Database.h"
 #include "models.h"
 
+// OOP CONCEPT: ENCAPSULATION & ABSTRACTION
+// 1. Encapsulation: The Inventory class manages catalog data, coupling it with access rules
+//    (role checks and price/quantity validation) to maintain state consistency.
+// 2. Abstraction: The public methods provide high-level product catalog operations, hiding
+//    the complexity of SQL statement compilation, parameter binding, and cursor traversal.
 class Inventory {
 public:
     explicit Inventory(Database& db) : db_(db) {}
@@ -20,6 +25,8 @@ public:
     std::vector<Product> getLowStock(int threshold = 5);
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING & INTERNAL HELPER METHODS)
+    // Low-level database helpers and connection references are private to hide SQLite mechanics.
     Database& db_;
 
     sqlite3_stmt* prepare(const std::string& sql);

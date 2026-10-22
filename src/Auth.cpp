@@ -15,6 +15,9 @@ static std::string hashPassword(const std::string& salt, const std::string& pass
     return picosha2::hash256_hex_string(salt + password);
 }
 
+// OOP CONCEPT: ABSTRACTION
+// Callers simply provide plain username and password; this method abstracts away the
+// generation of a random 16-character cryptographic salt, SHA-256 hashing, and SQL parameter binding.
 void Auth::createUser(const std::string& username, const std::string& password, Role role) {
     std::string salt = makeSalt();
     std::string hash = hashPassword(salt, password);
@@ -37,6 +40,9 @@ void Auth::createUser(const std::string& username, const std::string& password, 
         throw std::runtime_error("Could not create user (username taken?)");
 }
 
+// OOP CONCEPT: ABSTRACTION & ENCAPSULATION
+// 1. Abstraction: Verifies credentials without requiring caller knowledge of salts or hashes.
+// 2. Encapsulation: Protects sensitive credential data and prevents unauthorized login logic bypass.
 std::optional<User> Auth::login(const std::string& username, const std::string& password) {
     const char* sql =
         "SELECT id, salt, password_hash, role FROM users WHERE username = ?;";
@@ -67,6 +73,9 @@ bool Auth::hasUsers() {
     return any;
 }
 
+// OOP CONCEPT: ENCAPSULATION (AUTHORIZATION & ACCESS CONTROL)
+// Internal user data is guarded by role verification (actor.role == Role::Admin),
+// ensuring business security rules are encapsulated within the class logic.
 std::vector<User> Auth::getAllUsers(const User& actor) {
     if (actor.role != Role::Admin)
         throw std::runtime_error("Access denied: admin only");

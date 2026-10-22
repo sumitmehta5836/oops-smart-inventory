@@ -2,6 +2,12 @@
 #include <string>
 #include <vector>
 
+// OOP ARCHITECTURAL NOTE (DATA TRANSFER OBJECTS vs ENCAPSULATED CLASSES):
+// The structs below (Product, User, CartItem, BillItem, Bill, etc.) represent Plain Old Data (POD)
+// and Data Transfer Objects (DTOs). Unlike encapsulated service classes, their members are public
+// for lightweight data transport between database, business logic, and GUI layers.
+// Business invariants and state validations are encapsulated in the service classes (Inventory, Billing, Auth).
+
 enum class Role { Admin, Cashier };
 
 struct Product { int id; std::string name; double price; int quantity; };

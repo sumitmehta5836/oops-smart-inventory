@@ -10,6 +10,13 @@
 #include "Inventory.h"
 #include "models.h"
 
+// OOP CONCEPT: INHERITANCE
+// BillingWidget inherits from the QWidget base class.
+// Base Class: QWidget | Derived Class: BillingWidget
+//
+// OOP CONCEPT: ENCAPSULATION
+// Encapsulates the active point-of-sale shopping cart (cart_), catalog cache,
+// and transactional checkout interactions safely within the class.
 class BillingWidget : public QWidget {
     Q_OBJECT
 
@@ -29,6 +36,8 @@ private slots:
     void updateCartTotals();
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING)
+    // The internal cart map and UI pointers cannot be directly accessed or modified by external classes.
     Billing& billing_;
     Inventory& inventory_;
     User currentUser_;

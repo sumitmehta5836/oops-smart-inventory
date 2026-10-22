@@ -13,6 +13,9 @@ Database::~Database() {
     if (db_) sqlite3_close(db_);
 }
 
+// OOP CONCEPT: ABSTRACTION
+// This method hides the low-level mechanics of executing SQL queries, managing error string
+// allocations (char* err), and freeing SQLite C memory, providing callers a simple string-based API.
 void Database::execute(const std::string& sql) {
     char* err = nullptr;
     if (sqlite3_exec(db_, sql.c_str(), nullptr, nullptr, &err) != SQLITE_OK) {

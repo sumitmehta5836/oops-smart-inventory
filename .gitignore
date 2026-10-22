@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Build outputs
+build/
+build_mac/
+*.o
+*.d
+
+# Qt Creator user settings
+.qtcreator/
+*.pro.user
+*.pro.user.*

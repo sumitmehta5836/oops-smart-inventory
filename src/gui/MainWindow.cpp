@@ -136,6 +136,11 @@ void MainWindow::setupUi() {
     billWidget_ = new BillingWidget(billing_, inventory_, currentUser_, stackedWidget_);
     invoicesWidget_ = new InvoicesWidget(billing_, currentUser_, stackedWidget_);
 
+    // OOP CONCEPT: RUNTIME POLYMORPHISM (SUBTYPE POLYMORPHISM VIA BASE-CLASS POINTERS)
+    // QStackedWidget::addWidget expects a pointer to the base class QWidget (QWidget*).
+    // Different derived widget objects (InventoryWidget, BillingWidget, InvoicesWidget, etc.)
+    // are upcast to QWidget* and stored within the same collection.
+    // At runtime, Qt uses virtual methods to handle events and render each derived widget polymorphically.
     stackedWidget_->addWidget(invWidget_);     // Index 0
     stackedWidget_->addWidget(billWidget_);    // Index 1
     stackedWidget_->addWidget(invoicesWidget_);// Index 2

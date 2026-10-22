@@ -8,6 +8,13 @@
 #include "Inventory.h"
 #include "models.h"
 
+// OOP CONCEPT: INHERITANCE
+// InventoryWidget inherits from the QWidget base class.
+// Base Class: QWidget (furnishes UI layout placement, event handling, and painting)
+// Derived Class: InventoryWidget (specializes QWidget into a full product inventory management view)
+//
+// OOP CONCEPT: ENCAPSULATION
+// Encapsulates the product table, search inputs, dialog launchers, and Inventory service reference.
 class InventoryWidget : public QWidget {
     Q_OBJECT
 
@@ -28,6 +35,8 @@ private slots:
     void onSelectionChanged();
 
 private:
+    // OOP CONCEPT: ENCAPSULATION (DATA HIDING)
+    // Widget controls, state collections, and backend service handles are kept private.
     Inventory& inventory_;
     User currentUser_;
 

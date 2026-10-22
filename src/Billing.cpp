@@ -27,6 +27,11 @@ static void requireAdmin(const User& actor) {
         throw std::runtime_error("Access denied: admin only");
 }
 
+// OOP CONCEPT: ABSTRACTION & ENCAPSULATION
+// 1. Abstraction: Encapsulates an entire ACID transaction behind a single function call.
+//    Callers are insulated from SQL transaction management (BEGIN, COMMIT, ROLLBACK),
+//    stock checks, inventory updates, and snapshot calculations.
+// 2. Encapsulation: Validates input items (positive quantities, non-empty cart) to safeguard database invariants.
 Bill Billing::generateBill(const User& actor, const std::vector<CartItem>& cart) {
     if (cart.empty()) throw std::invalid_argument("Cart is empty");
     for (const CartItem& c : cart)
@@ -166,6 +171,8 @@ std::vector<Bill> Billing::getRecentBills(int limit) {
     return out;
 }
 
+// OOP CONCEPT: ENCAPSULATION (AUTHORIZATION & ACCESS CONTROL)
+// Internal business reporting is protected by role-based authorization (admin only).
 std::vector<DailySales> Billing::dailySales(const User& actor, int limit) {
     requireAdmin(actor);
     std::vector<DailySales> out;
