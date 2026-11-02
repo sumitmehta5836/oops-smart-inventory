@@ -1,7 +1,7 @@
 src/Billing.o: \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json \
   src/Billing.cpp src/Billing.h src/Database.h src/models.h
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json:
 src/Billing.h:
 src/Database.h:
 src/models.h:
